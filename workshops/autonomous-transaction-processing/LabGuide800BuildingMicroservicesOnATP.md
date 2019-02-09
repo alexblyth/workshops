@@ -34,20 +34,71 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 ## Required Artifacts
 
--   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
-- Install node.js on your laptop
+- Using the linux server you created in the previous Lab, you will install Docker to download the microservices app used in this lab. See Step 0 for how to do this.
 - Download the **instantclient-basic-linux.x64-12.1.0.2.0.zip** from Oracle OTN [here](https://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html)
-- Docker installed on your local machine. If you do not have docker please follow this [Mac User link](https://docs.docker.com/docker-for-mac/install/), [Windows User link](https://docs.docker.com/docker-for-windows/install/) and install docker
-- Create a folder and clone git repository to your local machine 
-```
-git clone https://github.com/cloudsolutionhubs/ATPDocker.git
-```
+
 
 Note: Note there are two Docker files in the repository. That’s because we have two different applications–ATPnodeapp and aOne. Both of these are node.js applications which mimic as microservices in our case.
 
 ATPnodeapp simply makes a connection to the ATP database and does not require any schema setup. aOne, on the other hand is a sample marketplace application and requires schema and seed data to be deployed in the backend. If you plan to use that app, you will need to first run the create_schema.sql scripts on the database.
 
-## Steps
+# Steps
+
+## Step -1: Set up schema in ATP for the aOne applicaiton
+
+In SQL Developer, connect to your ATP (assuming you haven't already).
+
+Run the contents of this script:
+[create_schema](https://github.com/cloudsolutionhubs/ATPDocker/blob/master/aone/create_schema.sql)
+
+followed by a good 'ole commit for good measure
+```
+commit;
+```
+
+## Step 0: Install Docker on your Linux Server
+
+We will do the remainder of this Lab running as root on the linux server. No, this is not best practice, but for the sake of simplicity we'll do it any way... So, lets switch into the root account.
+
+```
+sudo su
+```
+
+Lets now connect your instance to the yum repo in the OCI region so we can install Docker and git.
+
+```
+yum -y install docker-engine git-all oracle-instantclient18.3-basic
+```
+
+Now lets get docker running
+
+```
+systemctl enable docker
+systemctl start docker
+```
+
+Lets pull down the docker image
+
+```
+git clone https://github.com/cloudsolutionhubs/ATPDocker.git
+```
+
+Penultimately, lets open up the port in the firewall to let you get to the app once its running
+```
+firewall-cmd --zone=public --permanent --add-port=3050/tcp
+```
+
+Finally (at least on the linux server), lets get the latest Oracle Instant Client.
+
+```
+cd ATPDocker
+
+wget https://objectstorage.us-phoenix-1.oraclecloud.com/n/apacanzset01/b/alb_adb_rs_software_bucket/o/instantclient-basic-linux.x64-12.1.0.2.0.zip
+```
+
+Finally (really this time), 
+
+And, off with the rest of the lab!
 
 ### **STEP 1: Provision an ATP instance and copy secure credential file to application folder**
 
@@ -63,7 +114,7 @@ Unzip and store the wallet in same folder as your application under /wallet_NODE
 unzip /path_to_wallet_RESTONHUBDB.zip -d /path_to_app_folder/ATPDocker/wallet_NODEAPPDB2/
 ```
 
-- In your wallet folder, edit sqlnet.ora and replace the fcontents of the file with the following text: 
+- In your wallet folder, edit sqlnet.ora and replace the contents of the file with the following text: 
 
 ```
 cd /path_to/ATPDocker/wallet_NODEAPPDB2
@@ -118,7 +169,7 @@ $ docker images -a
 You need to launch your docker image and change the following
 - dbuser: admin
 - password: WElcome_123#
-- connect string: yourdbname_high 
+- connect string: yourdbname_tp 
 
 ```
 
@@ -149,7 +200,7 @@ Your should get a response similar to this
 
 To check the app on the browser, you have bridged port 3050 on the container to your localhost.
 
-Open browser on your localhost and go to http://localhost:3050
+Open browser on your localhost and go to http://<ip address of you linux server>:3050
 
 This is what you see if your app ran successfully.
 

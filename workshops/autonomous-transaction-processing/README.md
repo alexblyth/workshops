@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Last Updated:<br>October 18, 2018
+Last Updated:<br>Feb 10 2019
 </td>
 <td class="td-banner">
 # Getting Started with Autonomous Transaction Processing                                    
@@ -16,17 +16,19 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Scaling an ATP Database
 - Loading data into ATP Database
 - Configure node.js app with ATP
-- Configure Java with ATP
-- Working with REST APIs
 - Building Microservices on ATP
 - Configure OCI-CLI
 
+Optionally, you can also learn how to:, 
+- Configure Java with ATP
+- Working with REST APIs
+
+
 # How to Get Your Free Cloud Trial Account
-Please click on the following link to create your <a class=“trial-link” href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181011P00041:ATPHOL&SC=:ex:tb:::RC_NAMK181011P00041:ATPHOL&pcode=NAMK181011P00041" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
 
-  - Soon after requesting your trial you will receive the following email. You may begin working on Lab 100.
+As you have pre-registered, please follow the instructors directions to create and login to your Oracle Cloud Infrastructure tenancy.
 
-  ![](images/readme/code_9.png)
+Your instructor will also give you access to a Windows Terminal Server instance that has Oracle SQLDeveloper, Putty and the OCI CLI pre-installed to save time.
 
 # Workshop Overview
 
@@ -39,6 +41,15 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **You are all set, let's begin!**
 
+## Lab 0: Logon to your Windows Terminal Server environment
+
+Your instructor will give you a username, password and IP address of a Windows Terminal Server environment.
+
+Open the Remote Desktop application on your Windows Desktop (for Mac, you'll need to download an "RDP Client" from the App Store).
+
+Using the IP Address, username and password, logon to your "Virtual Desktop".
+
+**The remainder of the day will be spent inside this environment.**
 
 ## Lab 1: Provisioning an Autonomous Transaction Processing Database
 
@@ -88,23 +99,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **[Click here to run Lab 5](LabGuide500Configurenode.jsAppWithATP.md)**
 
-## Lab 6: Configure Java with ATP
-
-**Key Objectives**:
-
-- Learn how to build a linux Java application server and connect it to an Oracle ATP database service
-
-**[Click here to run Lab 6](LabGuide600ConfigureJavaAppWithATP.md)**
-
-## Lab 7: Working with REST APIs
-
-**Key Objectives**:
-
-- Learn how to generate REST calls to the Oracle Cloud Infrastructure using node.js
-
-**[Click here to run Lab 7](LabGuide700WorkingWithRESTAPIs.md)**
-
-## Lab 8: Building microservices on ATP
+## Lab 6: Node.js - microservices or rest services lab
 
 **Key Objectives**:
 
@@ -113,7 +108,8 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **[Click here to run Lab 8](LabGuide800BuildingMicroservicesOnATP.md)**
 
-## Lab 9: Configure OCI-CLI
+
+## Lab 7: Configure OCI-CLI
 
 **Key Objectives**:
 
@@ -124,6 +120,24 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 
 ## Appendix
+
+## Appendix 1: Configure Java with ATP
+
+**Key Objectives**:
+
+- Learn how to build a linux Java application server and connect it to an Oracle ATP database service
+
+**[Click here to run Lab 6](LabGuide600ConfigureJavaAppWithATP.md)**
+
+## Appendix 2: Working with REST APIs
+
+**Key Objectives**:
+
+- Learn how to generate REST calls to the Oracle Cloud Infrastructure using node.js
+
+**[Click here to run Lab 7](LabGuide700WorkingWithRESTAPIs.md)**
+
+## Appendix 3: Docker
 
 **Key Objectives**:
 
@@ -137,3 +151,4 @@ Use these links to get more information about Oracle Autonomous Transaction Proc
 
 - [Oracle Autonomous Transaction Processing Cloud Website](https://www.oracle.com/database/autonomous-transaction-processing.html)
 - [Oracle Autonomous Transaction Processing Cloud docs](https://docs.oracle.com/en/cloud/paas/atp-cloud/index.html)
+
