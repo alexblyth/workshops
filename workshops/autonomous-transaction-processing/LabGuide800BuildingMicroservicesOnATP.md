@@ -1,9 +1,9 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-October 18, 2018
+Feb 10 2019
 </td>
 <td class="td-banner">
-# Lab 8: Building microservices on ATP
+# Lab 6: Building microservices on ATP
 </td></tr><table>
 
 ## Introduction

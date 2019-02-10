@@ -1,9 +1,9 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-October 18, 2018
+Feb 10 2019
 </td>
 <td class="td-banner">
-# Lab 9: Configure Oracle Cloud Infrastructure Command Line Interface
+# Lab 7: Configure Oracle Cloud Infrastructure Command Line Interface
 </td></tr><table>
  
 
