@@ -40,36 +40,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ### **STEP 1: Install Oracle Cloud Infrastructure Command Line Interface (OCI-CLI)**
 
-- There are two ways to install the CLI and you can use the one that is best suited for your environment. Use either of the following options:
-    - Automatically installing the CLI and dependencies with the CLI installer
-    - Manually installing the CLI and dependencies within a virtual environment
-
-#### Using the CLI installer
-
-The installer uses a script to install the CLI and programs that are required. You can use the installer to eliminate most of the manual steps to install the CLI. The installer script:
-
-- Installs Python 
-    - During installation, you are prompted to provide a location for installing the binaries and executables. If Python is not installed on your computer, or the installed version of Python is incompatible with the CLI, you are prompted to install Python.
-    - The installer doesn't try to install Python on a MacOS computer. However, the script notifies you if the version of Python on the computer is too old or incompatible.
-
-- Installs virtualenv and creates a virtual environment
-
-- Installs the latest version of the CLI
-
-    - The installer overwrites an existing installation if you chose to do so. Respond with Y when prompted to upgrade the CLI to the newest version.
-    - During the installation, you are asked if you want to update your PATH. Updating the PATH adds the CLI executable ("oci.exe") to your PATH. Adding oci.exe to the PATH lets you invoke the CLI without providing the full path to the executable. If you want to update your PATH, respond with Y when prompted. You are notified when to close and restart the terminal session.
-
-To install the CLI on any compute with Bash
-
-- Open a terminal 
-- To run the installer script, run the following command
-- Respond to the installer's prompts
-
-```
-bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
-```
-
-![](./images/900/OCI-CLI-Install.png)
+The OCI CLI has already been installed on the Windows Terminial Server environment provided by your instructor. Please proceed to the next step.
 
 
 ### **STEP 2: Configure OCI CLI**
