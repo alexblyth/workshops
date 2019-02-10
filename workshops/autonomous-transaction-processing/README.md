@@ -106,7 +106,7 @@ Using the IP Address, username and password, logon to your "Virtual Desktop".
 - To build a docker container running node.js microservice
 - Deploy it on an ATP service
 
-**[Click here to run Lab 8](LabGuide800BuildingMicroservicesOnATP.md)**
+**[Click here to run Lab 6](LabGuide800BuildingMicroservicesOnATP.md)**
 
 
 ## Lab 7: Configure OCI-CLI
@@ -116,7 +116,7 @@ Using the IP Address, username and password, logon to your "Virtual Desktop".
 - Configure Oracle Cloud Infrastructure Command Line Interface
 - Run examples using OCI-CLI for Autonomous Transaction Processing database
 
-**[Click here to run Lab 9](LabGuide900ConfigureOCI-CLI.md)**
+**[Click here to run Lab 7](LabGuide900ConfigureOCI-CLI.md)**
 
 
 ## Appendix
